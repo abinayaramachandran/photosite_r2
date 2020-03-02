@@ -1,4 +1,4 @@
-<%= @photos.count %>
+No of Photos - <%= @photos.count %>
 <table>
   <thead>
     <tr>
@@ -9,13 +9,16 @@
 <tbody>
 <% @photos.each do |photo| %>
   <tr>
-    <td><%= image_tag(photo.file_name , size: "160x150") %></td>
+    <td><%= image_tag(photo.file_name , size: "160x150") %>
+    <br>
+      Photo created at   <%= photo.date_time %>
+    </td>
     <% if  photo.comments.size == 0 %>
       <td>No comments</td>
     <% end %>
     <% photo.comments.each do |comment| %>
       <td><%= link_to "#{comment.user.first_name} #{comment.user.last_name}", user_photos_path(comment.user_id) %>
-         - <%= comment.comment_text %> <br>
+         - <%= comment.comment_text %> <br><br>
         Created At: <%= comment.date_time %>
       </td>
 <!--      <td><%#= link_to "#{comment.user.first_name} #{comment.user.last_name}", user_photos_path(comment.user_id) %></td>-->

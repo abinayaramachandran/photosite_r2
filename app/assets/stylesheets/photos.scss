@@ -11,18 +11,19 @@ table {
 }
 td {
   border: 1px solid #000;
+  padding: 10px;
 }
 
 tr{
   display: block;
 }
-table td:first-child,
-table td:first-child input {
-  width: 50%;
-}
-.small {
-  width: 20px;
-}
-.medium {
-  width: 40px;
-}
+//table td:first-child,
+//table td:first-child input {
+//  width: 50%;
+//}
+//.small {
+//  width: 20px;
+//}
+//.medium {
+//  width: 40px;
+//}
